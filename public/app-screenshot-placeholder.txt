@@ -1,0 +1,2 @@
+Replace this file with app-screenshot.png (a screenshot of the Braid desktop app).
+The original temp file was no longer available at copy time.
