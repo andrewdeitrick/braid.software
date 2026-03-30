@@ -1,0 +1,24 @@
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/braid-logo.png" alt="Braid" class="w-8 h-8 rounded-lg" />
+      <span class="text-lg font-semibold text-text-primary">Braid</span>
+    </a>
+    <div class="hidden sm:flex items-center gap-8">
+      <a href="#features" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Features</a>
+      <a href="#pricing" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Pricing</a>
+      <a href="#download" class="inline-flex items-center px-4 py-2 rounded-lg bg-accent-green text-bg-base text-sm font-semibold hover:brightness-110 transition">Download</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const nav = document.getElementById("nav");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+      nav.classList.add("bg-bg-surface/95", "backdrop-blur-md", "border-b", "border-border-default");
+    } else {
+      nav.classList.remove("bg-bg-surface/95", "backdrop-blur-md", "border-b", "border-border-default");
+    }
+  });
+</script>
