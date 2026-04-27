@@ -1,0 +1,80 @@
+<section id="faq" class="py-24 px-6">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">Questions, answered</h2>
+    <p class="text-text-secondary text-center mb-16">Things people ask before they buy.</p>
+
+    <div class="space-y-3">
+      <details class="group rounded-xl border border-border-default bg-bg-surface overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none hover:bg-bg-surface-raised transition-colors">
+          <span class="text-base font-semibold">What happens when my license expires?</span>
+          <svg class="w-5 h-5 text-text-muted flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="px-6 pb-5 text-text-secondary text-sm leading-relaxed">
+          You keep the latest stable build of Braid you had at the time your license expired — forever. The app doesn't lock, throttle, or downgrade. You just stop receiving new updates until you renew. Renew anytime to pick back up.
+        </div>
+      </details>
+
+      <details class="group rounded-xl border border-border-default bg-bg-surface overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none hover:bg-bg-surface-raised transition-colors">
+          <span class="text-base font-semibold">Is my code uploaded anywhere?</span>
+          <svg class="w-5 h-5 text-text-muted flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="px-6 pb-5 text-text-secondary text-sm leading-relaxed">
+          No. Braid is a local-first desktop app. Your code, prompts, terminal output, notes, and command history live in a SQLite database on your machine. The only network calls Braid makes are sign-in, license validation, and update checks. Agent traffic (Claude, Codex, etc.) goes directly from your machine to those vendors — Braid is never in the middle.
+        </div>
+      </details>
+
+      <details class="group rounded-xl border border-border-default bg-bg-surface overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none hover:bg-bg-surface-raised transition-colors">
+          <span class="text-base font-semibold">Why $50 — what's the catch?</span>
+          <svg class="w-5 h-5 text-text-muted flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="px-6 pb-5 text-text-secondary text-sm leading-relaxed">
+          No catch. $50 is the founding price — locked at that rate for life as long as you renew. The standard price after launch is $96/yr, which is closer to what a tool like this is worth. Founding members are betting on Braid early; the price reflects that.
+        </div>
+      </details>
+
+      <details class="group rounded-xl border border-border-default bg-bg-surface overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none hover:bg-bg-surface-raised transition-colors">
+          <span class="text-base font-semibold">Mac only? When are Windows and Linux coming?</span>
+          <svg class="w-5 h-5 text-text-muted flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="px-6 pb-5 text-text-secondary text-sm leading-relaxed">
+          Mac only at launch. Braid is built on Tauri, which is cross-platform by default — but I want the Mac build solid before splitting attention. Windows and Linux are on the roadmap. Founding licenses cover all platforms when they ship, at no extra cost.
+        </div>
+      </details>
+
+      <details class="group rounded-xl border border-border-default bg-bg-surface overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none hover:bg-bg-surface-raised transition-colors">
+          <span class="text-base font-semibold">Which AI agents does Braid actually support?</span>
+          <svg class="w-5 h-5 text-text-muted flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="px-6 pb-5 text-text-secondary text-sm leading-relaxed">
+          Anything that runs in a terminal. Claude Code and Codex have first-class terminal kinds (color-coded, recognized, with smart status detection). But because Braid spawns real PTYs, you can run any CLI agent — Aider, Cursor's CLI, your own scripts. If it talks to a shell, Braid hosts it.
+        </div>
+      </details>
+
+      <details class="group rounded-xl border border-border-default bg-bg-surface overflow-hidden">
+        <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none hover:bg-bg-surface-raised transition-colors">
+          <span class="text-base font-semibold">What's your refund policy?</span>
+          <svg class="w-5 h-5 text-text-muted flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="px-6 pb-5 text-text-secondary text-sm leading-relaxed">
+          Full refund within 14 days, no questions. Email <a href="mailto:hello@braid.software" class="text-accent-green hover:brightness-110">hello@braid.software</a> and you'll have your money back the same day. The 14-day free trial means most people don't need this, but it's there if you do.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>

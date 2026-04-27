@@ -3,21 +3,30 @@ import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import Hero from "../components/Hero.astro";
 import ProblemStatement from "../components/ProblemStatement.astro";
+import HowItWorks from "../components/HowItWorks.astro";
 import Features from "../components/Features.astro";
-import TeamFeatures from "../components/TeamFeatures.astro";
+import BuiltForSolo from "../components/BuiltForSolo.astro";
+import Roadmap from "../components/Roadmap.astro";
 import Pricing from "../components/Pricing.astro";
+import FAQ from "../components/FAQ.astro";
 import FinalCTA from "../components/FinalCTA.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Braid — Tame the chaos of parallel development" description="Braid weaves your AI-powered workflows into a single, organized interface. Tasks, terminals, and GitHub — all braided together.">
+<Layout
+  title="Braid — Run AI agents in parallel without losing your mind"
+  description="Braid is the local-first desktop command center for parallel AI coding. Isolated worktrees, real terminals for Claude and Codex, async GitHub — all in one place. Founding licenses $50/yr."
+>
   <Nav />
   <main>
     <Hero />
     <ProblemStatement />
+    <HowItWorks />
     <Features />
-    <TeamFeatures />
+    <BuiltForSolo />
+    <Roadmap />
     <Pricing />
+    <FAQ />
     <FinalCTA />
   </main>
   <Footer />

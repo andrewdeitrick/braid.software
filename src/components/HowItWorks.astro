@@ -1,0 +1,86 @@
+<section id="how-it-works" class="py-24 px-6 relative overflow-hidden">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-accent-blue/5 blur-[120px] pointer-events-none"></div>
+
+  <div class="relative max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">How Braid works</h2>
+    <p class="text-text-secondary text-center max-w-2xl mx-auto mb-20">Three steps from chaotic agent juggling to calm, parallel shipping.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+      <!-- Step 1 -->
+      <div class="relative">
+        <div class="rounded-xl border border-border-default bg-bg-surface p-8 h-full">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded-lg bg-accent-purple/15 flex items-center justify-center text-accent-purple font-mono text-sm font-bold">01</div>
+            <span class="text-xs font-medium text-text-muted uppercase tracking-wider">Create a task</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Spin up an isolated worktree</h3>
+          <p class="text-text-secondary text-sm leading-relaxed mb-5">Name a task, pick a base branch, and Braid provisions a fresh git worktree on disk. No stashing, no branch confusion — just a clean room for the work.</p>
+          <div class="rounded-lg bg-bg-base font-mono text-xs p-4 text-text-secondary">
+            <p class="text-text-muted"># auto-created on task creation</p>
+            <p>/projects/myapp<span class="text-accent-blue">/.worktrees/auth-flow</span></p>
+            <p class="mt-2 text-fresh">✓ branch: feat/auth-flow</p>
+            <p class="text-fresh">✓ worktree: ready</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative">
+        <div class="rounded-xl border border-border-default bg-bg-surface p-8 h-full">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded-lg bg-accent-green/15 flex items-center justify-center text-accent-green font-mono text-sm font-bold">02</div>
+            <span class="text-xs font-medium text-text-muted uppercase tracking-wider">Launch terminals</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Send agents to work in parallel</h3>
+          <p class="text-text-secondary text-sm leading-relaxed mb-5">Open a Claude terminal, a Codex terminal, or a plain shell — all inside the task's worktree. Each agent has its own room. None of them collide.</p>
+          <div class="rounded-lg bg-bg-base font-mono text-xs p-4 space-y-1.5">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span>
+              <span class="text-text-primary">claude</span>
+              <span class="text-text-muted">— refactoring auth module</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-accent-blue"></span>
+              <span class="text-text-primary">codex</span>
+              <span class="text-text-muted">— writing tests</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-accent-green"></span>
+              <span class="text-text-primary">shell</span>
+              <span class="text-text-muted">— npm run dev</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative">
+        <div class="rounded-xl border border-border-default bg-bg-surface p-8 h-full">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded-lg bg-accent-blue/15 flex items-center justify-center text-accent-blue font-mono text-sm font-bold">03</div>
+            <span class="text-xs font-medium text-text-muted uppercase tracking-wider">Ship</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Watch GitHub from the same panel</h3>
+          <p class="text-text-secondary text-sm leading-relaxed mb-5">PR status, CI checks, and reviews refresh in the background. When everything's green, ship — without ever opening github.com.</p>
+          <div class="rounded-lg bg-bg-base p-4 space-y-2.5">
+            <div class="flex items-center gap-2 text-xs">
+              <span class="text-text-muted">PR #142</span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] bg-fresh/10 text-fresh">open</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-text-secondary">
+              <span class="flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-fresh"></span>
+                CI passing
+              </span>
+              <span class="flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-fresh"></span>
+                2 approvals
+              </span>
+            </div>
+            <div class="text-xs text-text-muted">Refreshed 12s ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
