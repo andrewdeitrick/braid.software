@@ -1,3 +1,7 @@
+---
+import { BRAID_DOWNLOAD_URL, BRAID_PRO_CHECKOUT_URL } from "../lib/links";
+---
+
 <section id="download" class="py-32 px-6 relative overflow-hidden">
   <!-- Brand braid backdrop -->
   <img
@@ -12,10 +16,10 @@
     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Stop juggling.<br />Start braiding.</h2>
     <p class="text-text-secondary text-lg mb-10 max-w-xl mx-auto">Get the desktop app and turn agent chaos into parallel shipping.</p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="https://braid.lemonsqueezy.com/" data-checkout="pro" class="inline-flex items-center px-8 py-3.5 rounded-xl bg-accent-green text-bg-base font-semibold text-base hover:brightness-110 transition shadow-lg shadow-accent-green/20">
+      <a href={BRAID_PRO_CHECKOUT_URL} data-checkout="pro" class="inline-flex items-center px-8 py-3.5 rounded-xl bg-accent-green text-bg-base font-semibold text-base hover:brightness-110 transition shadow-lg shadow-accent-green/20">
         Get Braid Pro — $50/yr
       </a>
-      <a href="https://braid.lemonsqueezy.com/" class="inline-flex items-center px-6 py-3 rounded-xl border border-border-default text-text-primary text-sm font-medium hover:bg-bg-surface transition">
+      <a href={BRAID_DOWNLOAD_URL} class="inline-flex items-center px-6 py-3 rounded-xl border border-border-default text-text-primary text-sm font-medium hover:bg-bg-surface transition">
         Download for Mac
       </a>
     </div>

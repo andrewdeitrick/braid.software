@@ -1,3 +1,7 @@
+---
+import { BRAID_PRO_CHECKOUT_URL } from "../lib/links";
+---
+
 <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
     <a href="/" id="nav-brand" class="flex items-center gap-3 opacity-0 -translate-y-2 transition-all duration-300 pointer-events-none">
@@ -8,7 +12,7 @@
       <a href="#features" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Features</a>
       <a href="#roadmap" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Roadmap</a>
       <a href="#pricing" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Pricing</a>
-      <a href="https://braid.lemonsqueezy.com/" class="inline-flex items-center px-4 py-2 rounded-lg bg-accent-green text-bg-base text-sm font-semibold hover:brightness-110 transition">Get Braid Pro</a>
+      <a href={BRAID_PRO_CHECKOUT_URL} class="inline-flex items-center px-4 py-2 rounded-lg bg-accent-green text-bg-base text-sm font-semibold hover:brightness-110 transition">Get Braid Pro</a>
     </div>
   </div>
 </nav>

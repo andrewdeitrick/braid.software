@@ -1,3 +1,7 @@
+---
+import { BRAID_DOWNLOAD_URL, BRAID_PRO_CHECKOUT_URL } from "../lib/links";
+---
+
 <section id="pricing" class="py-24 px-6 relative overflow-hidden">
   <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-accent-green/5 blur-[120px] pointer-events-none"></div>
 
@@ -48,7 +52,7 @@
             Multiple projects
           </li>
         </ul>
-        <a href="https://braid.lemonsqueezy.com/" class="block w-full text-center py-3 rounded-lg border border-border-default text-text-primary text-sm font-semibold hover:bg-bg-surface-raised transition">Download free</a>
+        <a href={BRAID_DOWNLOAD_URL} class="block w-full text-center py-3 rounded-lg border border-border-default text-text-primary text-sm font-semibold hover:bg-bg-surface-raised transition">Download free</a>
       </div>
 
       <!-- Pro -->
@@ -91,7 +95,7 @@
             Priority support from the Braid team
           </li>
         </ul>
-        <a href="https://braid.lemonsqueezy.com/" data-checkout="pro" class="block w-full text-center py-3 rounded-lg bg-accent-green text-bg-base text-sm font-bold hover:brightness-110 transition shadow-lg shadow-accent-green/20">Get Braid Pro</a>
+        <a href={BRAID_PRO_CHECKOUT_URL} data-checkout="pro" class="block w-full text-center py-3 rounded-lg bg-accent-green text-bg-base text-sm font-bold hover:brightness-110 transition shadow-lg shadow-accent-green/20">Get Braid Pro</a>
         <p class="text-xs text-text-muted text-center mt-3">Renew yearly. Cancel anytime.</p>
       </div>
     </div>
