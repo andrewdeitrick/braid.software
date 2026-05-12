@@ -1,0 +1,116 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { BRAID_DOWNLOAD_URL } from "../lib/links";
+---
+
+<Layout
+  title="Download Braid"
+  description="Download Braid for macOS and activate your Pro license."
+>
+  <main class="min-h-screen bg-bg-base text-text-primary">
+    <section class="mx-auto flex min-h-screen max-w-4xl flex-col justify-center px-6 py-20">
+      <a
+        href="/"
+        class="mb-10 inline-flex w-fit items-center gap-2 text-sm text-text-secondary transition hover:text-text-primary"
+      >
+        <span aria-hidden="true">←</span>
+        Braid
+      </a>
+
+      <div class="grid gap-8">
+        <div class="grid gap-4">
+          <p class="font-mono text-xs uppercase tracking-[0.16em] text-accent-green">
+            Download
+          </p>
+          <h1 class="max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">
+            Install Braid, then activate your license.
+          </h1>
+          <p class="max-w-2xl text-lg leading-8 text-text-secondary">
+            The macOS download starts automatically. After Braid is in Applications,
+            return here and open it with your checkout license.
+          </p>
+        </div>
+
+        <div class="grid gap-3 rounded-lg border border-border-default bg-bg-surface p-5">
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <a
+              id="download-link"
+              href={BRAID_DOWNLOAD_URL}
+              class="inline-flex items-center justify-center rounded-lg bg-accent-green px-5 py-3 text-sm font-semibold text-bg-base transition hover:brightness-110"
+            >
+              Download for macOS
+            </a>
+            <a
+              id="activate-link"
+              href="#"
+              class="inline-flex items-center justify-center rounded-lg border border-border-default px-5 py-3 text-sm font-semibold text-text-primary transition hover:border-accent-green"
+            >
+              Open Braid and activate
+            </a>
+          </div>
+          <p id="activation-help" class="text-sm leading-6 text-text-secondary">
+            If the activate button is disabled, use the license key from your Lemon
+            Squeezy receipt inside Braid's License window.
+          </p>
+        </div>
+
+        <ol class="grid gap-3 text-sm leading-6 text-text-secondary sm:grid-cols-3">
+          <li class="rounded-lg border border-border-default bg-bg-surface/70 p-4">
+            <strong class="block text-text-primary">1. Open the DMG</strong>
+            Mount the downloaded Braid disk image.
+          </li>
+          <li class="rounded-lg border border-border-default bg-bg-surface/70 p-4">
+            <strong class="block text-text-primary">2. Move Braid</strong>
+            Drag Braid into Applications and launch it.
+          </li>
+          <li class="rounded-lg border border-border-default bg-bg-surface/70 p-4">
+            <strong class="block text-text-primary">3. Activate</strong>
+            Click the activate button on this page.
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <script define:vars={{ downloadUrl: BRAID_DOWNLOAD_URL }}>
+    const params = new URLSearchParams(window.location.search);
+    const licenseKey = params.get("license_key") || params.get("licenseKey") || "";
+    const normalizedLicenseKey = licenseKey.trim();
+    const hasLicenseKey =
+      normalizedLicenseKey && !/^\[[a-z_]+\]$/i.test(normalizedLicenseKey);
+    const downloadLink = document.getElementById("download-link");
+    const activateLink = document.getElementById("activate-link");
+    const activationHelp = document.getElementById("activation-help");
+
+    function startDownload() {
+      const link = document.createElement("a");
+      link.href = downloadUrl;
+      link.rel = "noopener";
+      link.style.display = "none";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    }
+
+    window.setTimeout(startDownload, 600);
+
+    if (activateLink instanceof HTMLAnchorElement) {
+      if (hasLicenseKey) {
+        const activateUrl = new URL("braid://activate");
+        activateUrl.searchParams.set("license_key", normalizedLicenseKey);
+        activateLink.href = activateUrl.toString();
+        activationHelp.textContent =
+          "macOS may ask for permission before opening Braid from this browser.";
+      } else {
+        activateLink.setAttribute("aria-disabled", "true");
+        activateLink.classList.add("pointer-events-none", "opacity-50");
+      }
+    }
+
+    if (downloadLink instanceof HTMLAnchorElement) {
+      downloadLink.addEventListener("click", () => {
+        window.setTimeout(() => downloadLink.blur(), 0);
+      });
+    }
+  </script>
+</Layout>
