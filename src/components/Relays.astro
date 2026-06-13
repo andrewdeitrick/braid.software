@@ -1,0 +1,91 @@
+---
+// Relays — the flagship: compose Claude + Codex into a loop that ships itself.
+---
+
+<section id="relays" class="py-24 px-6 relative overflow-hidden">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full bg-accent-purple/8 blur-[130px] pointer-events-none"></div>
+
+  <div class="relative max-w-6xl mx-auto">
+    <div class="text-center mb-20">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 text-accent-green text-xs font-medium mb-5">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        Relays
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Hand the work to a relay</h2>
+      <p class="text-text-secondary max-w-2xl mx-auto leading-relaxed">A relay chains your agents into a loop and runs it end-to-end for you. You set the guardrails and decide how much it does on its own.</p>
+    </div>
+
+    <div class="space-y-24">
+      <!-- Ship preset (flagship) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 text-accent-green text-xs font-medium mb-4">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+            Ship preset
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-bold mb-4">Walk away. Come back to a green PR.</h3>
+          <p class="text-text-secondary leading-relaxed mb-4">The Ship relay runs the whole loop: Claude implements your task, Codex reviews the diff, Claude folds in the findings, and the PR opens itself — then Braid watches CI and, when it goes red, feeds the failing logs straight back to Claude to fix. It keeps going until the checks are green.</p>
+          <p class="text-text-secondary text-sm leading-relaxed">Bounded by guardrails you set — a maximum number of iterations and a wall-clock limit — so it converges or stops, but never spins forever.</p>
+        </div>
+        <div class="rounded-xl border border-border-default bg-bg-surface p-4 shadow-2xl shadow-accent-green/10">
+          <img
+            src="/braid-ship-run.png"
+            alt="A finished Ship relay: Claude implements, Codex reviews, the PR opens at github.com/.../pull/42, CI fails, Claude auto-fixes, and all checks pass"
+            class="w-full rounded-lg"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Loop builder -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1 rounded-xl border border-border-default bg-bg-surface p-4 shadow-2xl shadow-accent-purple/10">
+          <img
+            src="/braid-builder.png"
+            alt="The Braid loop builder: agent and shell steps with roles, prompt templates, per-step model overrides, and an autonomy control"
+            class="w-full rounded-lg"
+            loading="lazy"
+          />
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-purple/10 text-accent-purple text-xs font-medium mb-4">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            </svg>
+            Loop builder
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-bold mb-4">Compose Claude and Codex into a loop</h3>
+          <p class="text-text-secondary leading-relaxed mb-4">Relays are just graphs: agent steps, shell steps, repeats, and conditionals. Chain Claude to build, Codex to review, a shell to run your tests — then branch on the result. Save it as a preset and reuse it on any task in the project.</p>
+          <p class="text-text-secondary text-sm leading-relaxed">Per-step model and effort overrides. Prompt templates that get your task's title and description injected automatically — so every step knows what it's working on.</p>
+        </div>
+      </div>
+
+      <!-- Autonomy dial -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-blue/10 text-accent-blue text-xs font-medium mb-4">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+            </svg>
+            Autonomy
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-bold mb-4">You decide how much it decides</h3>
+          <p class="text-text-secondary leading-relaxed mb-4">Set the dial to <span class="text-text-primary font-medium">manual</span>, <span class="text-text-primary font-medium">tiered</span>, or <span class="text-text-primary font-medium">full-auto</span>. On tiered, Braid answers the low-risk calls itself, following the agent's own recommendation. It stops to ask you only when a choice is genuinely risky — and logs every decision it makes in the run.</p>
+          <p class="text-text-secondary text-sm leading-relaxed">A safety denylist always pauses for the dangerous stuff — drops, deletes, deploys, production, secrets — no matter where the dial is set.</p>
+        </div>
+        <div class="rounded-xl border border-border-default bg-bg-surface p-4 shadow-2xl shadow-accent-blue/10">
+          <img
+            src="/braid-autonomy.png"
+            alt="A relay paused on a high-risk question — whether to drop a legacy table — showing the recommended safe option and the reason, under tiered autonomy"
+            class="w-full rounded-lg"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

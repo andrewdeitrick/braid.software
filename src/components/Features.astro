@@ -1,7 +1,7 @@
 <section id="features" class="py-24 px-6">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6">Built for parallel agent work</h2>
-    <p class="text-text-secondary text-center max-w-2xl mx-auto mb-20">Each piece exists because juggling AI agents the old way doesn't scale past two.</p>
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6">The fundamentals, done right</h2>
+    <p class="text-text-secondary text-center max-w-2xl mx-auto mb-20">The same foundation holds whether you're driving or a relay is: real terminals, isolated worktrees, and GitHub that never blocks you.</p>
 
     <div class="space-y-24">
       <!-- Feature 1: Agent-aware terminals -->
@@ -14,31 +14,16 @@
             Agent terminals
           </div>
           <h3 class="text-2xl sm:text-3xl font-bold mb-4">Claude and Codex are first-class</h3>
-          <p class="text-text-secondary leading-relaxed mb-4">Each task can host multiple terminals — and Braid knows the difference between a Claude session, a Codex session, and a plain shell. Color-coded, named, and addressable. When an agent finishes (or stalls), you'll know.</p>
-          <p class="text-text-muted text-sm leading-relaxed">Real PTYs under the hood, not fake terminal emulators. Anything you can run in your shell, you can run here.</p>
+          <p class="text-text-secondary leading-relaxed mb-4">Each task can host multiple terminals — and Braid knows the difference between a Claude session, a Codex session, and a plain shell. Named, recognized, and kept in their own panes. When an agent finishes (or stalls), you'll know.</p>
+          <p class="text-text-muted text-sm leading-relaxed">Real PTYs under the hood, not fake terminal emulators. Anything you can run in your shell, you can run here — including the agent a relay just used, picked back up where it left off.</p>
         </div>
-        <div class="rounded-xl border border-border-default bg-bg-surface p-4">
-          <div class="rounded-lg bg-bg-base font-mono text-sm p-5 text-text-secondary space-y-3">
-            <div class="flex items-center gap-2 pb-2 border-b border-border-default">
-              <span class="w-2 h-2 rounded-full bg-accent-purple"></span>
-              <span class="text-text-primary text-xs">claude</span>
-              <span class="text-text-muted text-xs ml-auto">running · 4m</span>
-            </div>
-            <p><span class="text-accent-purple">claude&gt;</span> <span class="text-text-primary">implement OAuth callback handler</span></p>
-            <p class="text-text-muted">Reading src/auth/...</p>
-            <p class="text-text-muted">Editing 3 files...</p>
-            <p class="text-fresh">✓ Tests pass (12/12)</p>
-            <div class="flex items-center gap-2 pt-3 mt-3 border-t border-border-default">
-              <span class="w-2 h-2 rounded-full bg-accent-blue"></span>
-              <span class="text-text-primary text-xs">codex</span>
-              <span class="text-text-muted text-xs ml-auto">idle</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-accent-green"></span>
-              <span class="text-text-primary text-xs">shell</span>
-              <span class="text-text-muted text-xs ml-auto">npm run dev</span>
-            </div>
-          </div>
+        <div class="rounded-xl border border-border-default bg-bg-surface p-4 shadow-2xl shadow-accent-purple/10">
+          <img
+            src="/braid-terminals.png"
+            alt="A real terminal running inside a task's git worktree, showing live git history and status"
+            class="w-full rounded-lg"
+            loading="lazy"
+          />
         </div>
       </div>
 
